@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 13/3</title>
+    <style>
+      .contenido {
+        background-color: blanchedalmond;
+        color: lightgray;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      img {
+        width: 300px;
+        display: block;
+        margin: auto;
+      }
+      .formulario label {
+        display: block;
+      }
+      input[name="nombre"], input[name="email"] {
+        background-color: red;
+      }
+      input[type="submit"] {
+        position: relative;
+      }
+      form p:last-child {
+        font-size: 6pt;
+      }
+      img {
+        float: left;
+        margin-right: 2em;
+      }
+      #ofertas {
+        font-size: 3em;
+        background-color: yellow;
+      }
+    </style>
+    <script>
+        function encima(e){
+            const currentLeft = parseInt(e.style.left) || 0;
+            e.style.left= (currentLeft + 30) + "px";
+        }
+    </script>
+  </head>
+  <body>
+    <header>
+        <h1>La web de Franciso</h1>
+    </header>
+    <main>
+      <section class="contenido">
+        <img 
+        src="https://www.mozilla.org/media/img/firefox/home/master/hero-high-res.cae9da10bc55.jpg"
+      />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolor,
+          voluptatum deleniti nihil, temporibus voluptatem dicta non facere,
+          labore doloribus voluptate praesentium quisquam! Nobis at obcaecati
+          iste suscipit magnam facilis impedit pariatur, animi aut illo tenetur
+          fugiat quia nam, illum sapiente voluptatibus beatae labore nemo ipsam
+          praesentium. Illo, laborum maxime!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolor,
+          voluptatum deleniti nihil, temporibus voluptatem dicta non facere,
+          labore doloribus voluptate praesentium quisquam! Nobis at obcaecati
+          iste suscipit magnam facilis impedit pariatur, animi aut illo tenetur
+          fugiat quia nam, illum sapiente voluptatibus beatae labore nemo ipsam
+          praesentium. Illo, laborum maxime!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolor,
+          voluptatum deleniti nihil, temporibus voluptatem dicta non facere,
+          labore doloribus voluptate praesentium quisquam! Nobis at obcaecati
+          iste suscipit magnam facilis impedit pariatur, animi aut illo tenetur
+          fugiat quia nam, illum sapiente voluptatibus beatae labore nemo ipsam
+          praesentium. Illo, laborum maxime!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolor,
+          voluptatum deleniti nihil, temporibus voluptatem dicta non facere,
+          labore doloribus voluptate praesentium quisquam! Nobis at obcaecati
+          iste suscipit magnam facilis impedit pariatur, animi aut illo tenetur
+          fugiat quia nam, illum sapiente voluptatibus beatae labore nemo ipsam
+          praesentium. Illo, laborum maxime!
+        </p>
+      </section>
+      
+      <section class="formulario">
+        <form action="">
+            <h1>Introduce tus datos para registrarte</h1>
+            <p>Los datos requerido están en fondo rojo</p>
+          <label for="">Nombre: <input type="text" name="nombre" tabindex="1"/></label
+          ><label for="">Apellidos:<input type="text" name="apellidos" tabindex="3"/></label
+          ><label for="">Email: <input type="email" name="email" tabindex="4"/></label
+          ><label for="">Teléfono: <input type="tel" name="telefono" tabindex="5"/></label
+          ><label for="">Edad: <input type="number" name="edad" tabindex="2"/></label>
+          <input type="submit" value="Enviar" onmousemove="encima(this)" />
+          <p>Aceptas el tratamiento de los datos</p>
+        </form>
+      </section>
+      <div id="ofertas">¡¡¡¡¡¡¡¡¡¡OFERTAS!!!!!!</div>
+    </main>
+    <script>
+        const div = document.getElementById('ofertas');
+
+function parpadear() {
+    if (div.style.display === 'none') {
+        div.style.display = 'block';
+    } else {
+        div.style.display = 'none';
+    }
+}
+
+// Iniciar el parpadeo rápido
+setInterval(parpadear, 100);
+    </script>
+  </body>
+</html>
